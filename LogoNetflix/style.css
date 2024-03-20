@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: transparent;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url(../img/CatalogoDeFundoNetflix.jpg);
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.logo-wordmark {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    cursor: pointer;
+    width: 12%;
+    z-index: 1
+}
+
+.Netflix {
+    width: 140px;
+    height: 250px;
+    position: relative;
+    background: linear-gradient(
+        90deg,
+        rgb(178 7 16) 0px,
+        rgb(178 7 16) 50px,
+        transparent 50px,
+        transparent 90px,
+        rgb(178 7 16) 90px,
+        rgb(178 7 16) 140px
+    );
+    transform: translateY(0);
+    animation: float 3s infinite alternate;
+    z-index: 1;
+} @keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+.Netflix::before,
+.Netflix::after {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+.Netflix::before {
+    width: 50px;
+    height: 250px;
+    top: 0;
+    left: 45px;
+    background-color: rgb(229 9 20);
+    transform: skewX(19.7deg);
+    box-shadow: 0 0 30px black;
+}
